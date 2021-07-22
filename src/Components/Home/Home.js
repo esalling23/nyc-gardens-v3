@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 import community2 from '../../img/community2.jpeg'
+import createdGardenIndex from '../../img/createdGardenIndex.jpeg'
+import gardenIndex from '../../img/gardenIndex.jpeg'
+import galleryGarden1 from '../../img/galleryGarden1.jpeg'
+import galleryGarden2 from '../../img/galleryGarden2.jpeg'
+import galleryGarden3 from '../../img/galleryGarden3.jpeg'
+import galleryGarden4 from '../../img/galleryGarden4.jpeg'
 
 
 class Home extends Component {
@@ -13,17 +20,17 @@ class Home extends Component {
       <div class="container">
         <div class="row">
           <div class="col-lg-7">
-            <h1>Bootstrap 4 Blog - A free template by Bootstrap Temple</h1><a href="#hero" class="hero-link">Discover More</a>
+            <h1>Find Your Community Garden</h1>
           </div>
         </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
       </div>
     </section>
-    <section class="intro">
+    <section class="intro" id="scroll-to">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="h3">Some great intro here</h2>
-            <p class="text-big">Place a nice <strong>introduction</strong> here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
+            <h2 class="h3">Grow Your Community</h2>
+            <p class="text-big">Find gardens in your neighborhood, get connected, and join the conversation!</p>
           </div>
         </div>
       </div>
@@ -34,131 +41,31 @@ class Home extends Component {
           <div class="text col-lg-7">
             <div class="text-inner d-flex align-items-center">
               <div class="content">
-                <header class="post-header">
-                  <div class="category"><a href="#business">Business</a><a href="#technology">Technology</a></div><a href="post.html">
-                    <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2></a>
+              <header>
+                <a href='/gardens'> <h2 class="h4">See What Gardens People Are Talking About</h2></a>
                 </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                <footer class="post-footer d-flex align-items-center"><a href="#lorem" class="author d-flex align-items-center flex-wrap">
-                    <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid"/></div>
-                    <div class="title"><span>John Doe</span></div></a>
-                  <div class="date"><i class="icon-clock"></i> 2 months ago</div>
-                  <div class="comments"><i class="icon-comment"></i>12</div>
-                </footer>
+                <div><p>Check out these gardens and join the forum to find out about upcoming events, what's new, and what's growing. </p></div>
+                <Link to='/gardens'>
+                  <button class="btn-primary">View Gardens</button>
+                </Link>
               </div>
             </div>
           </div>
-          <div class="image col-lg-5"><img src="img/featured-pic-1.jpeg" alt="..."/></div>
+          <div class="image col-lg-5"><img src={ createdGardenIndex } alt="Commu"/></div>
         </div>
         <div class="row d-flex align-items-stretch">
-          <div class="image col-lg-5"><img src="img/featured-pic-2.jpeg" alt="..."/></div>
+          <div class="image col-lg-5"><img src={ gardenIndex } alt="..."/></div>
           <div class="text col-lg-7">
             <div class="text-inner d-flex align-items-center">
               <div class="content">
                 <header class="post-header">
-                  <div class="category"><a href="#business">Business</a><a href="#technology">Technology</a></div><a href="post.html">
-                    <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2></a>
+                  <a href='/all-gardens'> <h2 class="h4">View All NYC Community Gardens</h2></a>
                 </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                <footer class="post-footer d-flex align-items-center"><a href="#lorem" class="author d-flex align-items-center flex-wrap">
-                    <div class="avatar"><img src="img/avatar-2.jpg" alt="..." class="img-fluid"/></div>
-                    <div class="title"><span>John Doe</span></div></a>
-                  <div class="date"><i class="icon-clock"></i> 2 months ago</div>
-                  <div class="comments"><i class="icon-comment"></i>12</div>
-                </footer>
+                <p>Find a community garden in your area and start the conversation! </p>
+                <Link to='/all-gardens'>
+                  <button class="btn-primary">All Gardens</button>
+                </Link>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="row d-flex align-items-stretch">
-          <div class="text col-lg-7">
-            <div class="text-inner d-flex align-items-center">
-              <div class="content">
-                <header class="post-header">
-                  <div class="category"><a href="#business">Business</a><a href="#technology">Technology</a></div><a href="post.html">
-                    <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2></a>
-                </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                <footer class="post-footer d-flex align-items-center"><a href="#lorem" class="author d-flex align-items-center flex-wrap">
-                    <div class="avatar"><img src="img/avatar-3.jpg" alt="..." class="img-fluid"/></div>
-                    <div class="title"><span>John Doe</span></div></a>
-                  <div class="date"><i class="icon-clock"></i> 2 months ago</div>
-                  <div class="comments"><i class="icon-comment"></i>12</div>
-                </footer>
-              </div>
-            </div>
-          </div>
-          <div class="image col-lg-5"><img src="img/featured-pic-3.jpeg" alt="..."/></div>
-        </div>
-      </div>
-    </section>
-    <section style={{background: 'url(img/divider-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center bottom'}} class="divider">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2><a href="#hero" class="hero-link">View More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="latest-posts">
-      <div class="container">
-        <header>
-          <h2>Latest from the blog</h2>
-          <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </header>
-        <div class="row">
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="img/blog-1.jpg" alt="..." class="img-fluid"/></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#business">Business</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Ways to remember your important ideas</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="img/blog-2.jpg" alt="..." class="img-fluid"/></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#technology">Technology</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Diversity in Engineering: Effect on Questions</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-          <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="post.html"><img src="img/blog-3.jpg" alt="..." class="img-fluid"/></a></div>
-            <div class="post-details">
-              <div class="post-meta d-flex justify-content-between">
-                <div class="date">20 May | 2016</div>
-                <div class="category"><a href="#Financial">Financial</a></div>
-              </div><a href="post.html">
-                <h3 class="h4">Alberto Savoia Can Teach You About Interior</h3></a>
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="newsletter no-padding-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>Subscribe to Newsletter</h2>
-            <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="col-md-8">
-            <div class="form-holder">
-              <form action="#">
-                <div class="form-group">
-                  <input type="email" name="email" id="email" placeholder="Type your email address"/>
-                  <button type="submit" class="submit">Subscribe</button>
-                </div>
-              </form>
             </div>
           </div>
         </div>
@@ -167,19 +74,19 @@ class Home extends Component {
     <section class="gallery no-padding">
       <div class="row">
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="img/gallery-1.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-1.jpg" alt="..." class="img-fluid"/>
+          <div class="item"><a href="img/gallery-1.jpg" data-fancybox="gallery" class="image"><img src={ galleryGarden1} alt="..." class="img-fluid"/>
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="img/gallery-2.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-2.jpg" alt="..." class="img-fluid"/>
+          <div class="item"><a href="img/gallery-2.jpg" data-fancybox="gallery" class="image"><img src={ galleryGarden2 } alt="..." class="img-fluid"/>
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="img/gallery-3.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-3.jpg" alt="..." class="img-fluid"/>
+          <div class="item"><a href="img/gallery-3.jpg" data-fancybox="gallery" class="image"><img src={ galleryGarden3 } alt="..." class="img-fluid"/>
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="img/gallery-4.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-4.jpg" alt="..." class="img-fluid"/>
+          <div class="item"><a href="img/gallery-4.jpg" data-fancybox="gallery" class="image"><img src={galleryGarden4} alt="..." class="img-fluid"/>
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
       </div>

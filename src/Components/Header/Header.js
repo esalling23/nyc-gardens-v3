@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
         return (
           <header class="header">
-          <nav class="navbar navbar-expand-lg">
+          <nav class="navbar fixed-top navbar-expand-lg" >
       <div class="search-area">
         <div class="search-area-inner d-flex align-items-center justify-content-center">
           <div class="close-btn"><i class="icon-close"></i></div>
@@ -12,7 +12,7 @@ class Header extends Component {
             <div class="col-md-8">
               <form action="#">
                 <div class="form-group">
-                  <input type="search" name="search" id="search" placeholder="What are you looking for?"/>
+                  <input type="search" name="search" id="search" placeholder="Enter your zip code to find gardens near you"/>
                   <button type="submit" class="submit"><i class="icon-search-1"></i></button>
                 </div>
               </form>
