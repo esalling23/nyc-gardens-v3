@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
+import community2 from '../../img/community2.jpeg'
 
 
 class Home extends Component {
@@ -8,7 +9,7 @@ class Home extends Component {
         return (
           <div>
           <Header />
-          <section style={{ background: 'url(img/hero.jpg)', backgroundSize: 'cover', backgroundPosition: 'center center' }} class="hero">
+          <section style={{ backgroundImage: `url(${community2})`, backgroundSize: 'cover', backgroundPosition: 'center center' }} class="hero">
       <div class="container">
         <div class="row">
           <div class="col-lg-7">

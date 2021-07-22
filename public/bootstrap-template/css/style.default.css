@@ -72,7 +72,7 @@ button {
 
 main,
 aside {
-  padding: 50px 0 100px;
+  padding: 15px 0 100px;
 }
 
 h1 a {
@@ -1608,9 +1608,20 @@ STYLE SWITCHER FOR DEMO
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-right: 1rem;
-  font-size: 1rem;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bolder;
+}
+.navbar-brand-logo {
+  padding-top: -0.5rem;
+  padding-bottom: -0.5rem;
+  padding-right: .5rem;
+  margin-right: 1rem;
+  font-size: 3.3rem;
   color: #333;
   font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+
 }
 
 .navbar-toggler {
