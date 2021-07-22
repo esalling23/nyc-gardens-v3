@@ -617,6 +617,9 @@ div[class*="-btn"] {
     font-size: 0.75em;
   }
 }
+section.intro {
+  padding-bottom: 50px;
+}
 
 /*
 * ==========================================================
@@ -1744,9 +1747,9 @@ STYLE SWITCHER FOR DEMO
 }
 
 .btn-primary:hover {
-  color: #111;
-  background-color: #868686;
-  border-color: gray;
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2277,6 +2280,7 @@ h2,
 h3,
 .h3 {
   font-size: 2rem;
+  padding-bottom: 10px;
 }
 
 h4,
