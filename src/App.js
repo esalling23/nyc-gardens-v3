@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './Components/Home/Home.js'
 import SignIn from './Components/SignIn/SignIn'
+import SignUp from './Components/SignUp/SignUp'
 import AutoDismissAlert from './Components/AutoDismissAlert/AutoDismissAlert'
 import { v4 as uuid } from 'uuid'
 
@@ -50,6 +51,8 @@ deleteAlert = (id) => {
               <Route exact path='/' component={ Home } />
               <Route path='/sign-in' render={() => (
                 <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
+                )} />
+                <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
                 )} />
             </Switch>
       </Router>

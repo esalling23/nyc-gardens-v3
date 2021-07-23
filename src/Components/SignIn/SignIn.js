@@ -21,6 +21,7 @@ onSignIn = event => {
   event.preventDefault()
 
   const { msgAlert, history, setUser } = this.props
+  
   signIn(this.state)
     .then(res => setUser(res.data.user))
     .then(() => msgAlert({
@@ -58,6 +59,7 @@ onSignIn = event => {
             </div>
             <button type="submit" class="btn btn-primary">Sign In</button>
           </form>
+            <p class="auth">Not a member? Sign up <a href="/sign-up">here</a> </p>
           </div>
         </div>
       );

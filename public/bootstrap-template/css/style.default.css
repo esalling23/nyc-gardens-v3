@@ -351,6 +351,9 @@ p.text-hero i {
 p.small-text-hero {
   font-size: 1em;
 }
+p.auth {
+  padding-top: 10px;
+}
 
 h1,
 h2,
