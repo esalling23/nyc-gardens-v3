@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './Components/Home/Home.js'
 import SignIn from './Components/SignIn/SignIn'
 import SignUp from './Components/SignUp/SignUp'
+import GardenIndex from './Components/GardenIndex/GardenIndex'
+import { createdGardenIndex } from './api/gardens'
 import AutoDismissAlert from './Components/AutoDismissAlert/AutoDismissAlert'
 import { v4 as uuid } from 'uuid'
 
@@ -17,7 +19,15 @@ class App extends Component {
       msgAlerts: []
     }
   }
+
+  componentDidMount () {
+    createdGardenIndex()
+      .then(res => this.setState({ createdGardens: res.data }))
+      .catch(console.error)
+  }
 setUser = user => this.setState({ user })
+
+clearUser = () => this.setState({ user: null })
 
 deleteAlert = (id) => {
     this.setState((state) => {
@@ -31,8 +41,13 @@ deleteAlert = (id) => {
       return { msgAlerts: [...state.msgAlerts, { heading, message, variant, id }] }
     })
   }
+  setViewGarden = (gard) => {
+    this.setState({ viewGarden: gard })
+  }
+
   render() {
     const { msgAlerts, user } = this.state
+
     return (
     <Fragment>
     {msgAlerts.map(msgAlert => (
@@ -52,7 +67,11 @@ deleteAlert = (id) => {
               <Route path='/sign-in' render={() => (
                 <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
                 )} />
-                <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
+                <Route path='/sign-up' render={() => (
+                  <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
+                  )} />
+                  <Route exact path='/all-gardens' render={() => (
+                  <GardenIndex setViewGarden={this.setViewGarden} msgAlert={this.msgAlert} user={user} />
                 )} />
             </Switch>
       </Router>

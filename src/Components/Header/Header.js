@@ -33,7 +33,7 @@ class Header extends Component {
             </li>
             <li class="nav-item"><a href="/created" class="nav-link ">Forums</a>
             </li>
-            <li class="nav-item"><a href="#sign-out" class="nav-link ">Gardens</a>
+            <li class="nav-item"><a href="/all-gardens" class="nav-link ">Gardens</a>
             </li>
           </ul>
           <div class="navbar-text"><a href="#sign-in" class="search-btn"><i class="icon-search-1"></i></a></div>

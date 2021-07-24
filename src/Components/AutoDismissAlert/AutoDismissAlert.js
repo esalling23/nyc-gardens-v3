@@ -32,7 +32,7 @@ class AutoDismissAlert extends React.Component {
     return (
       <div class="alert-dismissible" show={this.state.show} variant={variant} onClose={this.handleClose} role="alert">
         <h3 class="h6">{heading} </h3>
-        <p>{message}</p>
+        <p class="alert-body">{message}</p>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
