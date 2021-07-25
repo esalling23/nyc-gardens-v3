@@ -1385,6 +1385,7 @@ main.posts-listing .post-footer {
 }
 
 .blog-post .post-body p:not(.lead) {
+
   font-size: 1em;
   line-height: 1.7em;
   color: #555;
@@ -2326,6 +2327,7 @@ h6,
 .lead {
   font-size: 1.3rem;
   font-weight: 300;
+  margin-top: 10px;
 }
 
 .display-1 {

@@ -14,6 +14,7 @@ class GardenIndex extends Component {
     this.state = {
       gardens: null,
       createdGardens: null
+
     }
   }
   componentDidMount () {
@@ -31,7 +32,6 @@ class GardenIndex extends Component {
       </Spinner>
     )
   }
-  
   gardens.forEach(garden => {
     if (garden.borough === "X") {
       garden.borough = "The Bronx"
@@ -41,8 +41,7 @@ class GardenIndex extends Component {
       garden.borough =  "Brooklyn"
     } if (garden.borough === "M") {
       garden.borough = "Manhattan"
-    }
-    if (garden.borough === "R") {
+    } if (garden.borough === "R") {
       garden.borough = "Staten Island"
     }
   })
