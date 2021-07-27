@@ -1,9 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Header from './Components/Header/Header.js'
 import Home from './Components/Home/Home.js'
 import SignIn from './Components/SignIn/SignIn'
 import SignUp from './Components/SignUp/SignUp'
+import AuthenticatedRoute from './Components/AuthenticatedRoute/AuthenticatedRoute.js'
+import SignOut from './Components/SignOut/SignOut.js'
+import ChangePassword from './Components/ChangePassword/ChangePassword.js'
 import AllGardens from './Components/AllGardens/AllGardens'
 import GardenView from './Components/GardenView/GardenView'
 import { createdGardenIndex } from './api/gardens'
@@ -48,9 +52,10 @@ deleteAlert = (id) => {
 
   render() {
     const { msgAlerts, user } = this.state
-
+    console.log(user)
     return (
     <Fragment>
+    <Header user={user} />
     {msgAlerts.map(msgAlert => (
             <AutoDismissAlert
               key={msgAlert.id}
@@ -77,6 +82,12 @@ deleteAlert = (id) => {
                 <Route exact path='/view-1' render={() => (
                   <GardenView createdGardens={this.state.createdGardens} viewGarden={this.state.viewGarden} msgAlert={this.msgAlert} user={user} />
                 )} />
+                <AuthenticatedRoute user={user} path='/sign-out' render={() => (
+            <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/change-password' render={() => (
+            <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )} />
             </Switch>
       </Router>
       </main>

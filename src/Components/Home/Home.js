@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 import community2 from '../../img/community2.jpeg'
 import createdGardenIndex from '../../img/createdGardenIndex.jpeg'
@@ -15,7 +14,6 @@ class Home extends Component {
     render() {
         return (
           <div>
-          <Header />
           <section style={{ backgroundImage: `url(${community2})`, backgroundSize: 'cover', backgroundPosition: 'center center' }} class="hero">
       <div class="container">
         <div class="row">

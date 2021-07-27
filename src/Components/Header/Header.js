@@ -1,48 +1,44 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
-class Header extends Component {
-    render() {
-        return (
-          <header class="header">
-          <nav class="navbar fixed-top navbar-expand-lg" >
-      <div class="search-area">
-        <div class="search-area-inner d-flex align-items-center justify-content-center">
-          <div class="close-btn"><i class="icon-close"></i></div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-8">
-              <form action="#">
-                <div class="form-group">
-                  <input type="search" name="search" id="search" placeholder="Enter your zip code to find gardens near you"/>
-                  <button type="submit" class="submit"><i class="icon-search-1"></i></button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="navbar-header d-flex align-items-center justify-content-between">
-          <a href="index.html" class="navbar-brand">NYC <span class="navbar-brand-logo">Gardens</span></a>
-          <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span></span><span></span><span></span></button>
-        </div>
-        <div id="navbarcollapse" class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="/" class="nav-link ">Home</a>
-            </li>
-            <li class="nav-item"><a href="/sign-in" class="nav-link ">Sign In</a>
-            </li>
-            <li class="nav-item"><a href="/created" class="nav-link ">Forums</a>
-            </li>
-            <li class="nav-item"><a href="/all-gardens" class="nav-link ">Gardens</a>
-            </li>
-          </ul>
-          <div class="navbar-text"><a href="#sign-in" class="search-btn"><i class="icon-search-1"></i></a></div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
+const authenticatedOptions = (
+  <Fragment>
+    <Nav.Link href="/change-password">Change Password</Nav.Link>
+    <Nav.Link href="/sign-out">Sign Out</Nav.Link>
+  </Fragment>
 )
-    }
-}
-export default Header;
+
+const unauthenticatedOptions = (
+  <Fragment>
+    <Nav.Link href="/sign-up">Sign Up</Nav.Link>
+    <Nav.Link href="/sign-in">Sign In</Nav.Link>
+  </Fragment>
+)
+
+const alwaysOptions = (
+  <Fragment>
+    <Nav.Link href="/">Home</Nav.Link>
+    <Nav.Link href="/all-gardens">Gardens</Nav.Link>
+  </Fragment>
+)
+
+const Header = ({ user }) => (
+
+  <Navbar className="d-flex align-items-center justify-content-between">
+    <Navbar.Brand href="#" >
+    NYC <span className="navbar-brand-logo">Gardens</span>
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="ml-auto">
+        { user && <span className="navbar-text mr-2">Welcome, {user.email}</span>}
+        { alwaysOptions }
+        { user ? authenticatedOptions : unauthenticatedOptions }
+      </Nav>
+      <div className="navbar-text"><a href="#sign-in" className="search-btn"><i className="icon-search-1"></i></a></div>
+    </Navbar.Collapse>
+  </Navbar>
+)
+
+export default Header

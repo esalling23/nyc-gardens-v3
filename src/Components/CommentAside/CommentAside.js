@@ -25,10 +25,8 @@ componentDidMount () {
       </Spinner>
     )
   }
-  console.log(gardens[0].comments[0].title)
   let titleArray = []
   const aside = gardens[0].comments.forEach(comment => {
-    console.log(comment)
     for (let prop in comment) {
       if (prop === 'title')
       titleArray.push(comment[prop])
