@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Header from './Components/Header/Header.js'
 import Home from './Components/Home/Home.js'
 import SignIn from './Components/SignIn/SignIn'
@@ -67,7 +67,6 @@ deleteAlert = (id) => {
             />
           ))}
       <main>
-        <Router>
           <Switch>
               <Route exact path='/' component={ Home } />
               <Route path='/sign-in' render={() => (
@@ -89,7 +88,6 @@ deleteAlert = (id) => {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
             </Switch>
-      </Router>
       </main>
       </Fragment>
     );
