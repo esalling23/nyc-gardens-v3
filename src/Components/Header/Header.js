@@ -2,25 +2,29 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
+import { NavLink } from 'react-router-dom'
+
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="/change-password">Change Password</Nav.Link>
-    <Nav.Link href="/sign-out">Sign Out</Nav.Link>
+    <NavLink className='nav-link' to="/change-password">Change Password</NavLink>
+    <NavLink className='nav-link' to="/sign-out">Sign Out</NavLink>
   </Fragment>
 )
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="/sign-in">Sign In</Nav.Link>
+    <NavLink className='nav-link' to="/sign-up">Sign Up</NavLink>
+    <NavLink className='nav-link' to="/sign-in">Sign In</NavLink>
   </Fragment>
 )
 
 const alwaysOptions = (
-  <Fragment>
-    <Nav.Link href="/">Home</Nav.Link>
-    <Nav.Link href="/all-gardens">Gardens</Nav.Link>
-  </Fragment>
+	<Fragment>
+		<NavLink className='nav-link' to='/'>Home</NavLink>
+		<NavLink className='nav-link' to='/all-gardens'>
+			Gardens
+		</NavLink>
+	</Fragment>
 )
 
 const Header = ({ user }) => (
